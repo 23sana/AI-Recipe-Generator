@@ -5,18 +5,18 @@ This web application generates recipes based on the ingredients provided by the 
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🔐 User Authentication (Register & Login)
-- 🥗 Ingredient-Based Recipe Search
-- 📋 Recipe Details (Ingredients, Instructions, Image)
-- 🧠 API Integration (Spoonacular)
-- 💾 SQLite Database
-- 🎨 Clean Dashboard UI
+-  User Authentication (Register & Login)
+-  Ingredient-Based Recipe Search
+-  Recipe Details (Ingredients, Instructions, Image)
+-  API Integration (Spoonacular)
+-  SQLite Database
+-  Clean Dashboard UI
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Python
 - Flask
@@ -28,7 +28,7 @@ This web application generates recipes based on the ingredients provided by the 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 AI_Recipe_Generator/
@@ -43,7 +43,7 @@ AI_Recipe_Generator/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### 1️⃣ Clone the Repository
 
@@ -93,7 +93,7 @@ The application will return recipes related to those ingredients.
 
 ---
 
-## 🔒 Security Note
+##  Security Note
 
 - API keys are stored in `.env`
 - `.env` file is excluded using `.gitignore`
