@@ -1,6 +1,6 @@
 
 import requests
-SPOONACULAR_API_KEY = "c6f5989799c7494c965fe53b9640a60d"
+SPOONACULAR_API_KEY = "Paste API Key"
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
