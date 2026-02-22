@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Recipe Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            min-height: 100vh;
+        }
+        .card {
+            border-radius: 20px;
+        }
+        .btn-custom {
+            background-color: #ff6f61;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #e65b50;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+
+    <!-- Top Bar -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>🍽 Welcome {{ current_user.username }} 🎉</h3>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card shadow-lg p-4">
+
+        <h4 class="mb-3 text-center">AI Recipe Generator</h4>
+
+        <!-- Recipe Form -->
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label">Enter Ingredients</label>
+                <input type="text" name="ingredients" class="form-control"
+                       placeholder="e.g. tomato, onion, cheese, pasta"
+                       required>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-custom">
+                    Generate Recipe 🍳
+                </button>
+            </div>
+        </form>
+
+        <!-- Generated Recipe Section -->
+       {% if recipe %}
+<div class="mt-4 card shadow p-4">
+
+    <h3>{{ recipe }}</h3>
+
+    {% if image %}
+        <img src="{{ image }}" class="img-fluid rounded mb-3" width="400">
+    {% endif %}
+
+    <h5>Ingredients:</h5>
+    <ul>
+        {% for item in ingredients_list %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h5>Instructions:</h5>
+    <div>
+        {{ instructions|safe }}
+    </div>
+
+</div>
+{% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<h2>Your Recipes</h2>
+{% for recipe in recipes %}
+    <hr>
+    <p><b>Ingredients:</b> {{ recipe.ingredients }}</p>
+    <pre>{{ recipe.content }}</pre>
+{% endfor %}
+<a href="/">Back</a>
